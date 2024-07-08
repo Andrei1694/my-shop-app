@@ -25,7 +25,7 @@ export default function Home() {
         </h5>
       </div>
       <div className="ml-6 mb-10">
-        <Slider spaceBetween={-30}>
+        <Slider spaceBetween={-50}>
           <BasicCard />
           <BasicCard />
           <BasicCard />
