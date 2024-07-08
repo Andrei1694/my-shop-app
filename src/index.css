@@ -12,3 +12,9 @@ body {
   font-family: "Lato", sans-serif;
   max-width: 375px;
 }
+
+.circle {
+  /* clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%); */
+  overflow: hidden;
+  z-index: -1;
+}
