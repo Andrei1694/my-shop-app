@@ -12,7 +12,7 @@ export default function Slider({ children, slidesPerView = 1, spaceBetween }) {
       slidesPerView={slidesPerView}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="pr-5"
+      className="z-50"
     >
       {React.Children.map(children, (child, index) => (
         <SwiperSlide key={index}>{child}</SwiperSlide>
