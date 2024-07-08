@@ -11,17 +11,3 @@ export default function Input() {
     </div>
   );
 }
-/* Label Left Content */
-
-/* Auto layout */
-// display: flex;
-// flex-direction: row;
-// align-items: center;
-// padding: 0px;
-// gap: 4px;
-
-// position: absolute;
-// width: 30px;
-// height: 16px;
-// left: 0px;
-// top: 0px;
