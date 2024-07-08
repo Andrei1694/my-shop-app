@@ -11,7 +11,7 @@ function App() {
         <div className="relative top-[-50%] right-[36px] rounded-full bg-primary-yellow w-full h-full"></div>
       </div> */}
       <Outlet />
-      <DefaultNav />
+    
     </>
   );
 }

@@ -11,6 +11,8 @@
 body {
   font-family: "Lato", sans-serif;
   max-width: 375px;
+  background-image: url("../src/assets/circle.svg");
+  background-repeat: no-repeat;
 }
 
 .circle {

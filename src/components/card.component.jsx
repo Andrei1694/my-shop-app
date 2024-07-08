@@ -17,7 +17,7 @@ export default function BasicCard({ className = "" }) {
               />
             </div>
           </div>
-          <div className="absolute top-[8px] right-[8px] shadow-[0px_1px_7px_rgba(0,_0,_0,_0.1)] rounded-81xl bg-background-white flex flex-row items-start justify-start p-2 cursor-pointer">
+          <div className="absolute top-[8px] right-[8px] shadow-[0px_1px_7px_rgba(0,_0,_0,_0.1)] rounded-81xl bg-white flex flex-row items-start justify-start p-2 cursor-pointer">
             <img
               className="w-4 relative h-4 overflow-hidden shrink-0"
               alt=""
@@ -26,7 +26,7 @@ export default function BasicCard({ className = "" }) {
           </div>
         </div>
         {/* content */}
-        <div className="bg-background-white flex flex-col items-start justify-start p-4 gap-4 w-full">
+        <div className="flex flex-col items-start justify-start p-4 gap-4 w-full bg-white">
           {/* Name */}
           <div className="flex flex-col gap-[4px] items-start justify-start">
             <div>

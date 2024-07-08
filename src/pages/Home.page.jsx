@@ -24,8 +24,8 @@ export default function Home() {
           Find the stuff you love.
         </h5>
       </div>
-      <div className="container max-w-container mb-10">
-        <Slider spaceBetween={-10}>
+      <div className="ml-6 mb-10">
+        <Slider spaceBetween={-30}>
           <BasicCard />
           <BasicCard />
           <BasicCard />
