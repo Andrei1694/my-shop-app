@@ -20,11 +20,11 @@ export default function Home() {
         </div>
       </div>
       <div className="container max-w-container mb-6">
-        <h5 className="leading-8 to-ui-gray-80 font-bold text-[28px]">
+        <h5 className="leading-8 text-ui-gray-80 font-bold text-[28px]">
           Find the stuff you love.
         </h5>
       </div>
-      <div className="w-[375px] px-6">
+      <div className="container max-w-container mb-10">
         <Slider spaceBetween={-10}>
           <BasicCard />
           <BasicCard />
@@ -34,8 +34,14 @@ export default function Home() {
           <BasicCard />
         </Slider>
       </div>
-      <div className="w-[375px] px-6">
-        <Slider slidesPerView={3} spaceBetween={180}>
+      <div className="container max-w-container mb-[42px]">
+        <div className="flex items-start justify-between font-extrabold text-xs mb-6">
+          <h5 className="text-ui-gray-80 leading-3 uppercase">HOT DEALS</h5>
+          <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
+            SEE ALL
+          </h5>
+        </div>
+        <Slider slidesPerView={2} spaceBetween={10}>
           <SmallCard />
           <SmallCard />
           <SmallCard />
@@ -44,15 +50,17 @@ export default function Home() {
           <SmallCard />
         </Slider>
       </div>
-
-      <div className="flex flex-wrap w-[375px] gap-4">
-        <ColorCard />
-        <ColorCard />
-        <ColorCard />
-        <ColorCard />
+      <div className="container max-w-container mb-6">
+        <TabMenu />
       </div>
-      <TabMenu />
-      {/* <DefaultNav stickyBottom /> */}
+      <div className="container max-w-container mb-10">
+        <div className="flex flex-wrap max-w-container gap-3">
+          <ColorCard />
+          <ColorCard />
+          <ColorCard />
+          <ColorCard />
+        </div>
+      </div>
     </>
   );
 }
