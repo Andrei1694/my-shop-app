@@ -51,6 +51,14 @@ export default function Home() {
         </Slider>
       </div>
       <div className="container max-w-container mb-6">
+        <div className="flex items-start justify-between font-extrabold text-xs mb-6">
+          <h5 className="text-ui-gray-80 leading-3 uppercase">
+            YOUR INTERESTS
+          </h5>
+          <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
+            SEE ALL
+          </h5>
+        </div>
         <TabMenu />
       </div>
       <div className="container max-w-container mb-10">
