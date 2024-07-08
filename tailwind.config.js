@@ -4,6 +4,17 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   "theme": {
+    container: {
+      center: true,
+      padding: '0',
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '100%',
+        xl: '100%',
+        '2xl': '100%',
+      },
+    },
     "extend": {
       "colors": {
         "text-white": "#fff",
@@ -33,7 +44,10 @@ module.exports = {
         "3xs": "10px",
         "8xs": "5px",
         "12xs": "1px"
-      }
+      },
+      maxWidth: {
+        'container': '327px',
+      },
     },
     "fontSize": {
       "base": "16px",
@@ -41,7 +55,7 @@ module.exports = {
       "xl": "20px",
       "9xl": "28px",
       "inherit": "inherit"
-    }
+    },
   },
   "corePlugins": {
     "preflight": false
