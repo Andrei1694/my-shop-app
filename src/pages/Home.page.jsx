@@ -55,10 +55,14 @@ export default function Home() {
       </div>
       <div className="container max-w-container mb-10">
         <div className="flex flex-wrap justify-between max-w-container gap-3">
-          <ColorCard />
-          <ColorCard />
-          <ColorCard />
-          <ColorCard />
+          <ColorCard text="Shopping habits and interests">
+            Shopping habits and interests
+          </ColorCard>
+          <ColorCard color="bg-accents-teal">Today's trending items</ColorCard>
+          <ColorCard color="bg-accents-indigo">Incoming! Flash deals</ColorCard>
+          <ColorCard color="bg-primary-yellow">
+            Browse your categories
+          </ColorCard>
         </div>
       </div>
     </>
