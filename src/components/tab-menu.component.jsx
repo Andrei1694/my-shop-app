@@ -38,7 +38,7 @@ const TabMenu = () => {
         {activeTab === "home" && (
           <div>
             <div className="flex flex-col gap-4">
-              <HorisontalCard />
+              <HorisontalCard discountMessage={"50% OFF"} />
               <HorisontalCard />
               <HorisontalCard />
             </div>
