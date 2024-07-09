@@ -1,8 +1,8 @@
-export default function Button({ children, disabled }) {
+export default function Button({ className, children, disabled }) {
   return (
     <button
       disabled={disabled}
-      className={`text-center font-bold text-base leading-5 cursor-pointer w-full rounded-mini h-[48px] [border:none] text-gray80 transition duration-300 ease-in-out
+      className={`text-center font-bold text-base leading-5 cursor-pointer  rounded-mini h-[48px] [border:none] text-gray80 transition duration-300 ease-in-out ${className} w-full
          ${
            disabled
              ? "bg-ui-gray-20 text-gray-60 cursor-not-allowed"

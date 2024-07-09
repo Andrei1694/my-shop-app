@@ -10,7 +10,7 @@ export default function Home() {
       <div className="container max-w-container mt-16 z-50">
         <div className="flex justify-between items-center font-extrabold text-xs to-ui-gray-80 leading-3 mb-[1px]">
           <h5>SUGGESTED FOR YOU</h5>
-           <Link to="/login">
+           <Link to="/Profile">
           <div>
            
             <img
