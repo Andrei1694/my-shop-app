@@ -1,6 +1,21 @@
 import doodle from "../assets/opendoodle@2x.png";
 import Button from "../components/button.component";
 import edit from '../assets/edit.png'
+import Slider from "../components/slider.component";
+
+const IconCard = ({ className = "" }) => {
+    return (
+      <div
+        className={`shadow-[0px_10px_20px_rgba(0,_0,_0,_0.04),_0px_2px_6px_rgba(0,_0,_0,_0.04),_0px_0px_1px_rgba(0,_0,_0,_0.04)] rounded-3xs bg-ui-white w-[113px] overflow-hidden flex flex-col items-center justify-start py-6 px-2 box-border gap-[16px] text-center text-xs text-ui-gray-80 font-headings-h6-12px-12 ${className}`}
+      >
+        <img className="w-8 relative h-8" alt="" src="/outline-24px--home.svg" />
+        <div className="w-[99px] relative leading-[12px] font-extrabold inline-block">
+          Payment
+        </div>
+      </div>
+    );
+  };
+  
 
 const SecondaryButtonDefault1 = ({ className = "" }) => {
   return (
@@ -60,7 +75,7 @@ const WishlistTellUs = ({ className = "" }) => {
 
 function LoggedInProfile() {
   return (
-    <div className="bg-white h-[1000px]">
+    <div className="bg-white">
       <div className="container max-w-container text-center mb-4">
         <div className="flex flex-col">
           <img
@@ -91,8 +106,24 @@ function LoggedInProfile() {
           </h5>
         </div>
       </div>
-      <div className="container max-w-container">
+      <div className="container max-w-container mb-11">
         <WishlistTellUs />
+      </div>
+      <div className="container max-w-container mb-16">
+        <div className="flex items-start justify-between font-extrabold text-xs mb-4">
+          <h5 className="text-ui-gray-80 leading-3 uppercase">MY ACCOUNT</h5>
+          <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
+            EDIT
+          </h5>
+        </div>
+        <div>
+           <Slider slidesPerView={3} spaceBetween={40}>
+           <IconCard />
+            <IconCard />
+            <IconCard />
+            <IconCard />
+           </Slider>
+        </div>
       </div>
     </div>
   );
