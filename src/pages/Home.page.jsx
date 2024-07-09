@@ -3,20 +3,24 @@ import ColorCard from "../components/color-card.component";
 import TabMenu from "../components/tab-menu.component";
 import Slider from "../components/slider.component";
 import SmallCard from "../components/small-card.component";
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <>
       <div className="container max-w-container mt-16 z-50">
         <div className="flex justify-between items-center font-extrabold text-xs to-ui-gray-80 leading-3 mb-[1px]">
           <h5>SUGGESTED FOR YOU</h5>
+           <Link to="/login">
           <div>
+           
             <img
               src="/avatar-default@2x.png"
               alt=""
               width="32px"
               height="32px"
             />
-          </div>
+        
+          </div>    </Link>
         </div>
       </div>
       <div className="container max-w-container mb-6">
