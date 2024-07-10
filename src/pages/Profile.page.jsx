@@ -1,21 +1,21 @@
 import doodle from "../assets/opendoodle@2x.png";
 import Button from "../components/button.component";
-import edit from '../assets/edit.png'
+import edit from "../assets/edit.png";
+import left from "../assets/left-icon.svg";
 import Slider from "../components/slider.component";
 
 const IconCard = ({ className = "" }) => {
-    return (
-      <div
-        className={`shadow-[0px_10px_20px_rgba(0,_0,_0,_0.04),_0px_2px_6px_rgba(0,_0,_0,_0.04),_0px_0px_1px_rgba(0,_0,_0,_0.04)] rounded-3xs bg-ui-white w-[113px] overflow-hidden flex flex-col items-center justify-start py-6 px-2 box-border gap-[16px] text-center text-xs text-ui-gray-80 font-headings-h6-12px-12 ${className}`}
-      >
-        <img className="w-8 relative h-8" alt="" src="/outline-24px--home.svg" />
-        <div className="w-[99px] relative leading-[12px] font-extrabold inline-block">
-          Payment
-        </div>
+  return (
+    <div
+      className={`shadow-[0px_10px_20px_rgba(0,_0,_0,_0.04),_0px_2px_6px_rgba(0,_0,_0,_0.04),_0px_0px_1px_rgba(0,_0,_0,_0.04)] rounded-3xs bg-ui-white w-[113px] overflow-hidden flex flex-col items-center justify-start py-6 px-2 box-border gap-[16px] text-center text-xs text-ui-gray-80 font-headings-h6-12px-12 ${className}`}
+    >
+      <img className="w-8 relative h-8" alt="" src="/outline-24px--home.svg" />
+      <div className="w-[99px] relative leading-[12px] font-extrabold inline-block">
+        Payment
       </div>
-    );
-  };
-  
+    </div>
+  );
+};
 
 const SecondaryButtonDefault1 = ({ className = "" }) => {
   return (
@@ -75,54 +75,66 @@ const WishlistTellUs = ({ className = "" }) => {
 
 function LoggedInProfile() {
   return (
-    <div className="bg-white">
-      <div className="container max-w-container text-center mb-4">
-        <div className="flex flex-col">
-          <img
-            src="/avatar-default@2x.png"
-            alt="avatar"
-            className="block mx-auto mb-3"
-            width={80}
-            height={80}
-          />
-          <h5 className="mb-2 font-bold text-xl leading-6 text-ui-gray-80">Stanciu Andrei</h5>
-          <p className="text-ui-gray-60 text-base leading-6">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia.
-          </p>
+    <div className="bg-primary-yellow ">
+      <div className="h-[104px] flex flex-col justify-center items-center container max-w-container">
+        <div className="flex items-start justify-start mt-16 mb-5 w-full">
+        <h5 className="font-extrabold leading-5 text-base  block mx-auto">Profile</h5>
         </div>
+        <img src={left} className="block absolute left-[24px] top-[64px] cursor-pointer" />
       </div>
-      <div className="container max-w-container">
-        {/*  */}
-        <div className="flex flex-col items-center justify-center mb-[26px]">
-          <SecondaryButtonDefault1 className="w-[175px] h-12 rounded-[15px]" />
+      <div className="bg-white rounded-t-xl">
+        <div className="container max-w-container text-center mb-4 ">
+          <div className="flex flex-col">
+            <img
+              src="/avatar-default@2x.png"
+              alt="avatar"
+              className="block mx-auto mb-3 mt-7"
+              width={80}
+              height={80}
+            />
+            <h5 className="mb-2 font-bold text-xl leading-6 text-ui-gray-80">
+              Stanciu Andrei
+            </h5>
+            <p className="text-ui-gray-60 text-base leading-6">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="container max-w-container">
-        <div className="flex items-start justify-between font-extrabold text-xs mb-6">
-          <h5 className="text-ui-gray-80 leading-3 uppercase">my Interests</h5>
-          <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
-            EDIT
-          </h5>
+        <div className="container max-w-container">
+          {/*  */}
+          <div className="flex flex-col items-center justify-center mb-[26px]">
+            <SecondaryButtonDefault1 className="w-[175px] h-12 rounded-[15px]" />
+          </div>
         </div>
-      </div>
-      <div className="container max-w-container mb-11">
-        <WishlistTellUs />
-      </div>
-      <div className="container max-w-container mb-16">
-        <div className="flex items-start justify-between font-extrabold text-xs mb-4">
-          <h5 className="text-ui-gray-80 leading-3 uppercase">MY ACCOUNT</h5>
-          <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
-            EDIT
-          </h5>
+        <div className="container max-w-container">
+          <div className="flex items-start justify-between font-extrabold text-xs mb-6">
+            <h5 className="text-ui-gray-80 leading-3 uppercase">
+              my Interests
+            </h5>
+            <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
+              EDIT
+            </h5>
+          </div>
         </div>
-        <div>
-           <Slider slidesPerView={3} spaceBetween={40}>
-           <IconCard />
-            <IconCard />
-            <IconCard />
-            <IconCard />
-           </Slider>
+        <div className="container max-w-container mb-11">
+          <WishlistTellUs />
+        </div>
+        <div className="container max-w-container mb-16">
+          <div className="flex items-start justify-between font-extrabold text-xs mb-4">
+            <h5 className="text-ui-gray-80 leading-3 uppercase">MY ACCOUNT</h5>
+            <h5 className="text-ui-gray-60 leading-4 underline underline-offset-2 uppercase">
+              EDIT
+            </h5>
+          </div>
+          <div>
+            <Slider slidesPerView={3} spaceBetween={40}>
+              <IconCard />
+              <IconCard />
+              <IconCard />
+              <IconCard />
+            </Slider>
+          </div>
         </div>
       </div>
     </div>
