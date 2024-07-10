@@ -1,6 +1,7 @@
-export default function Button({ className, children, disabled }) {
+export default function Button({ className, children, disabled , onClick}) {
   return (
     <button
+    onClick={onClick}
       disabled={disabled}
       className={`text-center font-bold text-base leading-5 cursor-pointer  rounded-mini h-[48px] [border:none] text-gray80 transition duration-300 ease-in-out ${className} w-full
          ${

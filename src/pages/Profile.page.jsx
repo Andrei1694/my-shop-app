@@ -3,6 +3,41 @@ import Button from "../components/button.component";
 import edit from "../assets/edit.png";
 import left from "../assets/left-icon.svg";
 import Slider from "../components/slider.component";
+import { useState } from "react";
+
+const ColorCard2 = ({
+    className = "",
+    color = "bg-accents-red",
+    children = "Gaming",
+  }) => {
+    return (
+      <div
+        className={`shadow-[0px_10px_20px_rgba(0,_0,_0,_0.04),_0px_2px_6px_rgba(0,_0,_0,_0.04),_0px_0px_1px_rgba(0,_0,_0,_0.04)] rounded-3xs ${color} w-[156px] h-[218px] overflow-hidden text-left text-xl text-text-white font-text-label-12px-12 flex flex-col ${className}`}
+      >
+        <b className="leading-[24px] p-4">{children}</b>
+        <div className="flex-1 flex flex-col justify-between items-center">
+          <div className="flex-1 flex items-center justify-center">
+            <img
+              className="max-w-full max-h-full object-contain"
+              alt=""
+              src="/electronics-062@2x.png"
+              width={123}
+              height={72}
+            />
+          </div>
+          <div className="self-end shadow-[0px_5px_15px_rgba(0,_0,_0,_0.1)] w-8 h-8 text-base text-ui-gray-80 rounded-full mb-4 mr-4">
+            <div className="w-full h-full rounded-mini bg-text-white overflow-hidden flex items-center justify-center">
+              <img
+                className="overflow-hidden"
+                alt=""
+                src="/outline-16px--chevronright.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
 const IconCard = ({ className = "" }) => {
   return (
@@ -46,7 +81,7 @@ const SecondaryButtonDefault1 = ({ className = "" }) => {
   );
 };
 
-const WishlistTellUs = ({ className = "" }) => {
+const AddCard = ({ className = "", children, title, icon, onClick }) => {
   return (
     <section
       className={`shadow-[0px_16px_24px_rgba(0,_0,_0,_0.06),_0px_2px_6px_rgba(0,_0,_0,_0.04),_0px_0px_1px_rgba(0,_0,_0,_0.04)] rounded-3xs bg-ui-white w-[327px] h-[300px] text-center text-xl text-ui-gray-80 font-headings-h6-12px-12 ${className}`}
@@ -57,30 +92,35 @@ const WishlistTellUs = ({ className = "" }) => {
           width={93}
           height={71}
           alt=""
-          src={doodle}
+          src={icon}
         />
-        <b className="leading-[24px] inline-block w-[295px] mb-2">
-          Tell us what interests you!
-        </b>
+        <b className="leading-[24px] inline-block w-[295px] mb-2">{title}</b>
         <p className="text-base leading-[24px] text-text-gray-60 inline-block w-[295px] mb-3">
-          You don’t have any interests listed. Tell us what you love the most
-          and we’ll recommend relevant products to you.
+          {children}
         </p>
 
-        <Button className="max-w-[295px]">Add my interests</Button>
+        <Button className="max-w-[295px]" onClick={onClick}>
+          Add my interests
+        </Button>
       </div>
     </section>
   );
 };
 
 function LoggedInProfile() {
+  const [isIntrests, setIsIntrests] = useState(false);
   return (
     <div className="bg-primary-yellow ">
       <div className="h-[104px] flex flex-col justify-center items-center container max-w-container">
         <div className="flex items-start justify-start mt-16 mb-5 w-full">
-        <h5 className="font-extrabold leading-5 text-base  block mx-auto">Profile</h5>
+          <h5 className="font-extrabold leading-5 text-base  block mx-auto">
+            Profile
+          </h5>
         </div>
-        <img src={left} className="block absolute left-[24px] top-[64px] cursor-pointer" />
+        <img
+          src={left}
+          className="block absolute left-[24px] top-[64px] cursor-pointer"
+        />
       </div>
       <div className="bg-white rounded-t-xl">
         <div className="container max-w-container text-center mb-4 ">
@@ -118,7 +158,25 @@ function LoggedInProfile() {
           </div>
         </div>
         <div className="container max-w-container mb-11">
-          <WishlistTellUs />
+          {!isIntrests && (
+            <AddCard
+              title="Tell us what interests you!"
+              icon={doodle}
+              onClick={() => {
+                console.log("adsda");
+                setIsIntrests(!isIntrests);
+              }}
+            >
+              You don’t have any interests listed. Tell us what you love the
+              most and we’ll recommend relevant products to you.
+            </AddCard>
+          )}
+          {isIntrests && <div className="flex flex-wrap items-start justify-between gap-y-4">
+            <ColorCard2 />
+            <ColorCard2 />
+            <ColorCard2 />
+            <ColorCard2 />
+            </div>}
         </div>
         <div className="container max-w-container mb-16">
           <div className="flex items-start justify-between font-extrabold text-xs mb-4">
