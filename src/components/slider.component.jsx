@@ -7,12 +7,15 @@ import React from "react";
 export default function Slider({ children, slidesPerView = 1, spaceBetween }) {
   return (
     <Swiper
+    height={400}
       spaceBetween={spaceBetween}
-      pagination={{ clickable: true }}
+      // pagination={{ clickable: true }}
       slidesPerView={slidesPerView}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
-      className="z-50"
+      className="p-10"
+      // centeredSlides={true}
+      style={{ padding: '20px 0' }} // Add vertical padding
     >
       {React.Children.map(children, (child, index) => (
         <SwiperSlide key={index}>{child}</SwiperSlide>
